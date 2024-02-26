@@ -1,0 +1,31 @@
+.nab img{
+    width: 100px; 
+}
+.nab h1{
+    font-size: 24px;
+    color: aliceblue;  
+}
+.nab{
+    background-color:#2a3d41;
+    align-items: center;
+    gap: 30px;
+}
+
+.Restaurant{
+    background-color: #a8bfc4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imgg {
+    width: 500px;
+    margin-left: 0; 
+    padding-left: 0;
+
+}
+
+.food-image {
+    width: 100%;
+}
+
+

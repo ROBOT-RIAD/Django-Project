@@ -1,0 +1,23 @@
+.nab img{
+    width: 100px; 
+}
+.nab h1{
+    font-size: 24px;
+    color: aliceblue;  
+}
+.nab{
+    background-color:#2a3d41;
+    align-items: center;
+    gap: 30px;
+}
+
+.banner-con{
+    height: 100vh;
+    background-image:url("../image/banner.jpg"),linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

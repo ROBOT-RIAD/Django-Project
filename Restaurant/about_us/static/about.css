@@ -1,0 +1,16 @@
+.Restaurant{
+    background-color: #a8bfc4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imgg {
+    width: 500px;
+    margin-left: 0; 
+    padding-left: 0;
+
+}
+
+.food-image {
+    width: 100%;
+}

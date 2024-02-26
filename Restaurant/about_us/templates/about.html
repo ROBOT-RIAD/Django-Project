@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{%load static %}
+
+{% block head_content %}
+<link rel="stylesheet" href="{% static "about.css" %}">
+{% endblock %}
+
+{% block content %}
+ <div class="Restaurant container">
+    <div class="row">
+        <div class="imgg col-md-6">
+            <img src="{% static "food.jpg" %}" alt="" class="food-image">   
+        </div>
+        <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+            <div>
+                <h1>Restaurant</h1>
+                <p>Indulge in culinary bliss at Restaurant, where every dish is a journey for your taste buds.
+                    At Restaurant, we don't just serve food; we craft experiences that leave a lasting impression.
+                    Experience the artistry of cuisine at Restaurant, where each dish is a masterpiece.</p>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+ <section class="footer container p-5" style="background-color: #0e071b;">
+    <div class="row justify-content-center">
+        <div class="col-lg-3 p-4">
+            <img class="w-75" src="{% static "Restaurant.png" %}" alt="picture">
+        </div>
+        <div class="col-md-9 row p-3 justify-content-center">
+            <div class="col-md-4 order-1 order-md-0 first">
+                <i class="fa-brands fa-twitter p-1" style="color: #ffffff;font-size: 30px; width: 50px;"></i>
+                <i class="fa-brands fa-facebook-f p-1" style="color: #ffffff; font-size: 30px; width: 50px"></i>
+                <i class="fa-brands fa-tiktok p-1" style="color: #ffffff; font-size: 30px; width: 50px"></i>
+                <i class="fa-brands fa-instagram p-1" style="color: #ffffff; font-size: 30px; width: 50px"></i>
+            </div>
+            <div class="col-md-8 row p-2 order-0 order-md-1 second">
+                <div class="col-md-6">
+                   <h4><i style="color: wheat;">Services</i></h4>
+                   <h5 style="color: #dadada;">Bonus program</h5>
+                   <h5 style="color: #dadada;">Gift cards</h5>
+                   <h5 style="color: #dadada;">Credit and Payment</h5>
+                   <h5 style="color: #dadada;">Service countract</h5>
+                   <h5 style="color: #dadada;">Non-cash Account</h5>
+                   <h5 style="color: #dadada;">Payment</h5>
+                </div>
+                <div class="col-md-6">
+                    <h4><i style="color: wheat;">Assistance to the buyer</i></h4>
+                    <h5 style="color: #dadada;">Find an order</h5>
+                    <h5 style="color: #dadada;">Terms of delivery</h5>
+                    <h5 style="color: #dadada;">Exchange ans return of goods</h5>
+                    <h5 style="color: #dadada;">Guarantee</h5>
+                    <h5 style="color: #dadada;">Frequently asked questions</h5>
+                    <h5 style="color: #dadada;">Terms of use of site</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+{% endblock %}
