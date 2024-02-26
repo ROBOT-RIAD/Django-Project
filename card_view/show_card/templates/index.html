@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content%}
+
+<div class="container" style="display: flex; flex-wrap: wrap;justify-content: center;">
+  {%for i in meals%}
+  <div
+    class="card p-3"
+    style="
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    "
+  >
+    <div class="">
+      <img
+        class="w-100"
+        src="{{i.strMealThumb}}"
+        alt="picture"
+      />
+      <h1 style="font-size: 20px">{{i.strMeal}}</h1>
+      <p class="" style="margin: 10px 0">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae minus
+        numquam rem, corrupti ipsa culpa.
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
