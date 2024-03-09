@@ -1,0 +1,5 @@
+{% extends "base.html" %} {%block content%} {%if data%} {%for i in data%}
+
+<h1>name : {{i.name}} Roll : {{i.roll}} address: {{i.address}}</h1>
+
+{% endfor %} {%else%} {{"no data"}} {%endif%} {%endblock%}

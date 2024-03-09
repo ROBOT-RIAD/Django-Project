@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center"><b>Form Data</b></h1>
+    {% if form_data %}
+        <h3>Name: {{ form_data.name }}</h3>
+        <h3>Email: {{ form_data.email }}</h3>
+        <h3>Comment: {{ form_data.comment }}</h3>
+        <h3>Agree: {{ form_data.agree }}</h3>
+        <h3>Birthday: {{ form_data.birthday }}</h3>
+        <h3>Expect Year: {{ form_data.expect_year }}</h3>
+        <h3>Day: {{ form_data.day }}</h3>
+        <h3>Value: {{ form_data.value }}</h3>
+        <h3>Favorite Color (Single): {{ form_data.favorite_colore }}</h3>
+        <h3>Favorite Color (Multiple): {{ form_data.favorite_color }}</h3>
+    {% else %}
+        <p>No form data submitted yet.</p>
+    {% endif %}
+{% endblock %}
