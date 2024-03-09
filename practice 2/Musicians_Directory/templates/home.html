@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{%block content%}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Musician Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Album Rating</th>
+        <th scope="col">Instrument Type</th>
+        <th scope="col">Album Name</th>
+        <th scope="col">Release Date</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% csrf_token %}
+      {%for i in data%}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.musician.first_name}} {{i.musician.last_name}}</td>
+        <td>{{i.musician.email}}</td>
+        <td>{{i.rating}}</td>
+        <td>{{i.musician.Instrument_Type}}</td>
+        <td>{{i.album_name}}</td>
+        <td>{{i.release_date}}</td>
+        <td><a href="{%url 'editmusician' i.id %}" class="btn btn-primary">edit</a> <a href="{%url 'deletes' i.id %}" class="btn btn-danger">delete</a></td>    
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+
+
+
+{%endblock%}
