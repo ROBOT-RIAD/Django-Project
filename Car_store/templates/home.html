@@ -1,0 +1,66 @@
+{% extends "base.html" %} 
+
+{% load static %}
+{% block content %}
+
+<div class="d-flex flex-wrap px-5 pt-3 align-items-center">
+  <div class="col-6">
+    <h1>Welcome to CAR STORE</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+      dolorum delectus necessitatibus temporibus adipisci, harum enim unde,
+      suscipit in ipsum provident hic minima molestias reiciendis nihil veniam
+      aut doloribus, ab quidem sit cum at nemo nulla autem! Dolor quaerat ea
+      voluptatem ullam, consequuntur quisquam ut iste. Vitae exercitationem
+      ipsum blanditiis. Nihil rem in quo magni quam sapiente ad ipsa voluptatum
+      saepe quos temporibus, at iste? Eum saepe eos error ea recusandae,
+      deserunt at quidem odio harum inventore. Necessitatibus eos sapiente
+      architecto optio aut esse, facilis, voluptatibus assumenda ut
+      exercitationem nobis molestias, quisquam nam quia odio ipsa? Voluptatem
+      voluptas distinctio eaque.
+    </p>
+  </div>
+  <div class="col-6">
+    <img style="width:500px" src="{% static 'download .jpg' %}" />
+  </div>
+</div>
+
+<br>
+
+<div class="text-center p-2 mr-10 mt-50">
+  <a href="{% url 'all_brands' %}" style="margin-right: 10px;" class="text-decoration-none text-dark btn-warning h3"><b>ALL</b></a>
+  {% for car in carmodel %}
+  <a href="{% url 'brand_wise_post' car.slug %}" style="margin-right: 10px;" class="text-decoration-none text-dark btn-warning h3"><b>{{ car.name }}</b></a>
+  {% endfor %}
+</div>
+<br>
+<br>
+<br>
+
+<h4>{{data | length}} results found</h4>
+<div class="d-flex flex-wrap pt-5 m-2">
+  {% for car in data %}
+<div class="card" style="width: 18rem;">
+  <img src="{{car.image.url}}" class="card-img-top" alt="picture">
+  <div class="card-body">
+    <h5 class="card-title"><a href="" class='text-decoration-none text-dark '>{{car.Car_name}}</a></h5>
+    <p class="card-text">{{car.description | truncatewords:5}}</p>
+    <p>Quantity:{{car.quantity}}</p>
+    <p>Price:{{car.price}}</p>
+    <p>
+      Brand name :   {{car.brand_name.name}}
+    </p>
+    <p>
+      {% if user.is_authenticated %}
+          {% if not car.buye and car.quantity > 0 %}
+            <a href={% url 'details' car.id %} class="btn text-dark btn-warning">buye</a>
+          {% else %}
+            <p>sold out</p>
+          {% endif %}
+        {% endif %}
+    </p> 
+  </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

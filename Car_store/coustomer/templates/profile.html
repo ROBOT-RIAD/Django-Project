@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>My Cars</h1>
+<ul>
+
+  {% for car in cars %}
+  <br>
+  <li>
+    <h2>{{ car.car_name }}</h2>
+    <p>Description: {{ car.description }}</p>
+    <p>Price: {{ car.price }}</p>
+    <p>Brand: {{ car.brand_name.name }}</p>
+    <p>Status: {% if car.buy %}Bought{% else %}Available{% endif %}</p>
+    {% if car.image %}
+    <img src="{{ car.image.url }}" alt="Car Image" />
+    {% endif %}
+  </li>
+  <br>
+  {% endfor %}
+</ul>
+
+{% endblock %}
